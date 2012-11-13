@@ -85,9 +85,13 @@ namespace FubuMVC.HandlerConventions.Testing
                              };
 
             routes
-                .Each(route => graph
-                                   .Routes
-                                   .ShouldContain(r => r.Pattern.Equals(route)));
+                .Each(route =>
+                    {
+                        graph.Routes.ShouldContain(r =>
+                                {
+                                   return r.Pattern.Equals(route);
+                                });
+                    });
         }
     }
 

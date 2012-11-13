@@ -24,7 +24,8 @@ namespace FubuMVC.HandlerConventions
                                             ? _markerTypes
                                             : new Type[]{registry.GetType()};
 
-            markers.Each(t => registry.Applies.ToAssembly(t.Assembly));
+            //registry.Actions.FindBy(x => new HandlerActionSource(markers));
+            //markers.Each(t => registry.Applies.ToAssembly(t.Assembly));
 
             var source = new HandlerActionSource(markers);
             registry.Routes.UrlPolicy(PolicyBuilder(markers.ToArray()));
@@ -38,16 +39,16 @@ namespace FubuMVC.HandlerConventions
             private readonly IEnumerable<Type> _markerTypes;
 
             public HandlerActionSource(IEnumerable<Type> markerTypes)
-                : base(new ActionMethodFilter())
             {
                 markerTypes.Each<Type>(
                     markerType =>
                     {
-                        TypeFilters.Includes +=
-                            t => t.Namespace.IsNotEmpty() && t.Namespace.StartsWith(markerType.Namespace);
+                        IncludeTypes(t => t.Namespace.IsNotEmpty() && t.Namespace.StartsWith(markerType.Namespace));
+                        //TypeFilters.Includes +=
+                        //    t => t.Namespace.IsNotEmpty() && t.Namespace.StartsWith(markerType.Namespace);
                     });
-
-                MethodFilters.Includes += m => m.Name == HandlersUrlPolicy.METHOD;
+                IncludeMethods(m => m.Name == HandlersUrlPolicy.METHOD);
+                //MethodFilters.Includes += m => m.Name == HandlersUrlPolicy.METHOD;
 
                 _markerTypes = markerTypes;
             }
