@@ -12,11 +12,11 @@
     <description>The "handler" convention for single action classes in your FubuMVC application.</description>
     <tags>fubumvc handler convention</tags>
     <dependencies>
-	  <dependency id="Bottles" version="0.9.9.399" />
-      <dependency id="FubuCore" version="0.9.9.205" />
-      <dependency id="FubuLocalization" version="0.9.5.104" />
-      <dependency id="FubuMVC.Core" version="0.9.8.1267" />
-      <dependency id="HtmlTags" version="1.2.0.127" />
+	  <dependency id="Bottles" version="0.9.9.401" />
+      <dependency id="FubuCore" version="0.9.9.206" />
+      <dependency id="FubuLocalization" version="0.9.5.105" />
+      <dependency id="FubuMVC.Core" version="0.9.9.1274" />
+      <dependency id="HtmlTags" version="1.2.0.128" />
     </dependencies>
   </metadata>
   <files>
