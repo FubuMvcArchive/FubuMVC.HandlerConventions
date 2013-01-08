@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>FubuMVC.HandlerConventions</id>
+    <version>0.0</version>
+    <authors>Jeremy Miller, Joshua Arnold</authors>
+    <owners>Jeremy Miller, Joshua Arnold</owners>
+    <licenseUrl>https://github.com/DarthFubuMVC/fubumvc/raw/master/license.txt</licenseUrl>
+    <projectUrl>http://mvc.fubu-project.org/</projectUrl>
+    <iconUrl>https://github.com/DarthFubuMVC/fubu-collateral/raw/master/Icons/FubuMvc_256.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The "handler" convention for single action classes in your FubuMVC application.</description>
+    <tags>fubumvc handler convention</tags>
+    <dependencies>
+	  <dependency id="Bottles" version="0.9.9.401" />
+      <dependency id="FubuCore" version="0.9.9.206" />
+      <dependency id="FubuLocalization" version="0.9.5.105" />
+      <dependency id="FubuMVC.Core" version="0.9.9.1274" />
+      <dependency id="HtmlTags" version="1.2.0.128" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\..\src\FubuMVC.HandlerConventions\bin\release\FubuMVC.HandlerConventions.*" target="lib\net40" />
+  </files>
+</package>
