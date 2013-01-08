@@ -79,7 +79,6 @@ namespace FubuMVC.HandlerConventions.Testing
                              {
                                  "posts/create",
                                  "posts/complex-route",
-                                 "posts/sub/route",
                                  "some-crazy-url/as-a-subfolder",
                                  "posts/{Year}/{Month}/{Title}"
                              };

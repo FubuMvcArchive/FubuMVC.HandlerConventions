@@ -10,6 +10,7 @@ deploy/*
 src/CommonAssemblyInfo.cs
 _ReSharper.*
 *.csproj.user
+*.DotSettings*
 *.resharper.user
 *.ReSharper.user
 *.suo
