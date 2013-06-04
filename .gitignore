@@ -26,3 +26,5 @@ src/*/repositories.config
 results
 *.DotSettings.user
 bottles.cmd
+Gemfile.lock
+logs
